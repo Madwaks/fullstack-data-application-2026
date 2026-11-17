@@ -1,10 +1,10 @@
 # Fullstack data application — API, données et pilotage d'agent
 
-Bienvenue dans ce module de dernière année (E5) — cours et TD.
+Bienvenue dans ce module de dernière année (E5) — cours et TP.
 
 Vous allez construire une application fullstack (backend **FastAPI**, frontend Python séparé,
 **PostgreSQL**, **Docker**) et apprendre à la construire **avec un agent de code** — **GitHub
-Copilot** — sans jamais perdre la maîtrise de ce qu'il produit.
+Copilot** par défaut, ou Claude Code / Codex — sans jamais perdre la maîtrise de ce qu'il produit.
 
 👉 **Commencez par [PRESENTATION.md](PRESENTATION.md)** : la présentation complète du module, ce
 qu'on y fait, comment on est évalué, et comment travailler.
@@ -24,7 +24,7 @@ qu'on y fait, comment on est évalué, et comment travailler.
 **Côté agentic**
 
 - spécifier une feature de façon qu'un agent puisse réellement l'exécuter ;
-- configurer un projet pour un agent (`.github/copilot-instructions.md`, conventions) ;
+- configurer un projet pour un agent (`AGENTS.md`, skills, agents spécialisés) ;
 - valider un plan avant d'implémenter ;
 - **reviewer du code généré** : schéma faux, migration destructrice, autorisation oubliée, test
   qui ne teste rien ;
@@ -46,26 +46,24 @@ logiciel, terminologie, Dockerfile, et un TP jusqu'à Docker Compose.
 | 3 | [PostgreSQL et le modèle relationnel](seances/seance-3-database) | [cours](seances/seance-3-database/cours) | [tp](seances/seance-3-database/tp) |
 | 4 | [L'application web en couches](seances/seance-4-webapp) | [cours](seances/seance-4-webapp/cours) | [tp](seances/seance-4-webapp/tp) |
 | 5 | [Authentification et autorisation](seances/seance-5-authentification) | [cours](seances/seance-5-authentification/cours) | [tp](seances/seance-5-authentification/tp) |
-| 6 | [Fondations agentic](seances/seance-6-fondations-agentic) | [cours](seances/seance-6-fondations-agentic/cours) | [tp](seances/seance-6-fondations-agentic/tp) |
-| 7 | [Le flow complet d'une feature](seances/seance-7-dev-agentic) | [cours](seances/seance-7-dev-agentic/cours) | [tp](seances/seance-7-dev-agentic/tp) |
+| 6 | [Développer une feature avec un agent](seances/seance-6-dev-agentic) | [cours](seances/seance-6-dev-agentic/cours) | [tp](seances/seance-6-dev-agentic/tp) |
 
 Chaque séance se partage entre cours et TP — la séance 6 est plus dense.
 
 Le TP n'est pas un exercice d'application : c'est là que vous construisez votre projet. À la fin
-de la séance 7, l'essentiel de votre application existe.
+de la séance 6, l'essentiel de votre application existe.
 
 ## Le projet
 
-- [Sujet du projet](projet/sujet.md) — GearShare, identique pour tous les groupes
-- [Grille d'évaluation](projet/grille-evaluation.md)
+- Sujet du projet : GearShare, identique pour tous les groupes
+- Grille d'évaluation : voir [PRESENTATION.md](PRESENTATION.md#8-lévaluation)
 
 ## Templates réutilisables
 
 À copier et adapter dans votre propre dépôt de projet :
 
-- [Exemple d'instructions projet pour l'agent](templates/claude-md-example.md)
-- [Checklist code review](templates/checklist-code-review.md)
-- [Template de PRD](templates/prd-template.md)
+- [Fiche feature](templates/fiche-feature.md) — la spécification d'une feature (version courte d'une PRD)
+- [Plan d'implémentation](templates/plan-implementation.md) — le plan à valider avant de laisser l'agent coder
 
 ## Ce que vous devez avoir avant la séance 1
 
