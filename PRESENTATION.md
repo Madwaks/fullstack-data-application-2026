@@ -199,6 +199,20 @@ de Git. Les séances reviendront sur ces notions, avec un rythme adapté à un n
 
 ## 8. L'évaluation
 
+### Le projet évalué : GearShare
+
+Le point de départ est **GearShare**, la plateforme de prêt de matériel entre étudiants décrite en
+[section 4](#4-ce-que-vous-allez-construire), que vous construisez TP après TP : API FastAPI,
+tests, base PostgreSQL, application en couches, frontend, authentification. À la fin de la
+séance 6, ce socle existe.
+
+**L'évaluation porte sur les fonctionnalités que vous ajoutez à ce socle.** Chaque
+fonctionnalité suit le flow travaillé en séance 6 : fiche feature, plan validé, implémentation
+avec l'agent, pull request, revue, merge. Ce qui est jugé, c'est la qualité de ces ajouts et de
+la démarche qui les a produits, dans le respect de l'architecture cible et de la stack commune.
+
+### La note
+
 Une note sur 20, sur le projet de groupe. Le détail complet est dans la
 grille d'évaluation ; voici la logique.
 
