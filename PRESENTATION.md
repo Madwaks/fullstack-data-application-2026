@@ -18,33 +18,33 @@ implémentations complètes et permettent d'explorer rapidement une base de code
 remplacent ni la compréhension du besoin, ni les choix d'architecture, ni la vérification du
 résultat.
 
-Deux réactions sont pourtant tentantes — et insuffisantes :
+Face à ces outils, deux réactions sont tentantes, et toutes deux montrent vite leurs limites :
 
-- **« Je n'ai plus besoin d'apprendre »** — et vous produisez du code que vous ne savez ni
-  expliquer, ni corriger, ni défendre. Le jour où l'application tombe en production à 23 h, vous
-  êtes seuls devant une stack trace.
-- **« Je n'utilise pas ces outils »** — et vous vous privez d'un levier devenu courant, sans
-  pour autant mieux résoudre les problèmes difficiles.
+- **« Je n'ai plus besoin d'apprendre »** : on finit par produire du code qu'on ne sait ni
+  expliquer, ni corriger, ni défendre. Le jour où l'application tombe en production à 23 h, on se
+  retrouve seul devant une stack trace.
+- **« Je n'utilise pas ces outils »** : on se prive d'un levier devenu courant, sans pour autant
+  mieux résoudre les problèmes difficiles.
 
-Ce module tient la position inverse, et c'est celle qui a de la valeur en entreprise :
+Ce module propose une voie entre les deux, celle qui est aussi recherchée en entreprise :
 
-> **Utilisez l'agent à fond, et sachez exactement ce qu'il vous a donné.**
+> **Utiliser pleinement l'agent, en comprenant ce qu'il vous a donné.**
 
-Concrètement, cela veut dire que vous devez maîtriser deux choses en même temps :
+Concrètement, il s'agit d'apprendre deux choses en parallèle :
 
-| Ce que vous devez savoir faire                                       | Pourquoi                               |
+| Ce que vous apprendrez à faire                                       | Pourquoi                               |
 | -------------------------------------------------------------------- | -------------------------------------- |
 | **Construire** une API, une base, une auth, des tests.         | Pour savoir ce qu'est un bon résultat |
 | **Piloter** un agent : spécifier, planifier, reviewer, tester | Pour aller vite sans produire de dette |
 
-La première moitié est le contenu technique classique. La seconde est ce qui change. Le module
-enseigne les deux, et l'évaluation portera sur les deux.
+La première moitié est le contenu technique classique, la seconde est ce qui change avec les
+agents. Le module travaille les deux, et l'évaluation en tient compte.
 
 ---
 
 ## 3. Ce que vous saurez faire à la fin
 
-À l'issue du module, vous devez être capables de :
+À l'issue du module, vous saurez :
 
 **Côté technique**
 
@@ -77,9 +77,9 @@ Le fil rouge de tout le module est un projet unique, identique pour tous les gro
 Publier du matériel qu'on prête, chercher et réserver du matériel disponible sur un créneau, gérer
 son compte, consulter son historique de prêts, laisser un avis après un emprunt.
 
-Le sujet est **volontairement simple** sur le plan fonctionnel. Ce n'est pas là-dessus que vous
-serez jugés : l'évaluation s'intéressera à la qualité de ce que vous construisez et à la façon dont vous le
-construisez, pas au nombre de fonctionnalités.
+Le sujet est **volontairement simple** sur le plan fonctionnel, pour que l'attention se porte sur
+la qualité de ce que vous construisez et sur la façon dont vous le construisez, plutôt que sur le
+nombre de fonctionnalités.
 
 ### L'architecture cible
 
@@ -94,7 +94,7 @@ construisez, pas au nombre de fonctionnalités.
 
 Trois services, trois conteneurs, un seul `docker compose up`.
 
-### La stack, imposée
+### Une stack commune
 
 | Couche           | Technologie                                                                             |
 | ---------------- | --------------------------------------------------------------------------------------- |
@@ -104,11 +104,11 @@ Trois services, trois conteneurs, un seul `docker compose up`.
 | Conteneurisation | **Docker + Docker Compose**, au minimum 3 services                                |
 | Authentification | Utilisateurs +**JWT**, mots de passe hachés                                      |
 | Tests            | **pytest**, cas nominaux et cas d'erreur                                          |
-| Agent            | **GitHub Copilot** (gratuit avec votre compte GitHub Education)                   |
+| Agent            | **GitHub Copilot** par défaut (gratuit avec GitHub Education) ; Claude Code ou Codex acceptés |
 
-Cette stack est commune à tous les groupes. Votre rendu doit la respecter pour être évalué : cela
-me permet de vous accompagner quand vous êtes bloqués, de comparer les projets équitablement et de
-vous faire travailler sur des technologies que vous retrouverez en entreprise.
+Tous les groupes partagent cette stack, et le projet doit la respecter pour être évalué. C'est ce
+qui me permet de vous aider efficacement quand vous êtes bloqués, d'évaluer les projets sur une
+base équitable et de vous faire travailler sur des technologies que vous retrouverez en entreprise.
 
 ---
 
@@ -122,8 +122,7 @@ vous faire travailler sur des technologies que vous retrouverez en entreprise.
 | 3 | **PostgreSQL et le modèle relationnel**                              | Un schéma correct, du SQL, des index, une base dans Compose                |
 | 4 | **L'application web en couches**                                      | SQLAlchemy, architecture en couches, Compose à 3 services                  |
 | 5 | **Authentification et autorisation**                                  | JWT, hachage de mots de passe, routes protégées, ownership                |
-| 6 | **Fondations agentic**                                                | Ce qu'est un agent, comment le piloter, instructions projet, mode Plan, MCP |
-| 7 | **Le flow complet d'une feature**                                     | Issue → plan → implémentation → PR → review → merge                   |
+| 6 | **Développer une feature avec un agent**                              | Instructions projet, skills, agents spécialisés ; fiche feature → plan → implémentation → PR → revue → merge |
 
 Chaque séance est construite pareil : **Cours + TP**.
 
@@ -140,36 +139,33 @@ détaillés et les critères de réussite sont précisés dans le support de cou
 | **3 — Base de données** | Différencier bases SQL et NoSQL ; maîtriser les notions fondamentales de PostgreSQL ; définir une structure de données relationnelle ; manipuler et interroger les données avec des commandes SQL simples. |
 | **4 — Application web** | Expliquer l'architecture d'une application web moderne ; identifier les rôles respectifs de l'API et de la base de données ; connecter les services ; développer une API qui agit sur une base de données ; produire une première application structurée. |
 | **5 — Authentification** | Identifier les mécanismes classiques d'authentification ; expliquer le rôle et la structure d'un jeton d'authentification ; appliquer les bonnes pratiques de sécurité ; sécuriser une API. |
-| **6 — Fondations agentic** | Distinguer assistant, chatbot et agent ; donner du contexte et des consignes utiles à un agent ; utiliser les instructions projet, le mode Plan et les outils ; vérifier ce que l'agent produit. |
-| **7 — Flow complet d'une feature** | Conduire une fonctionnalité de l'issue au merge ; rédiger des critères d'acceptation et un plan ; travailler avec branches, pull requests et code review ; contrôler les changements générés par un agent. |
+| **6 — Développer une feature avec un agent** | Donner du contexte et des consignes utiles à un agent (instructions projet, skills, agents spécialisés, mode Plan) ; conduire une fonctionnalité de la fiche feature au merge ; rédiger des critères d'acceptation et un plan ; travailler avec branches, pull requests et revue de code ; contrôler les changements générés par un agent. |
 
 ---
 
 ## 6. La place de l'agent dans ce module
 
-**L'agent est autorisé partout, et même attendu.** Je ne vais pas vous demander d'écrire du code à
+**L'agent est bienvenu partout, et même encouragé.** Je ne vous demanderai pas d'écrire du code à
 la main pour prouver que vous savez le faire.
 
-En revanche, trois règles s'appliquent, et elles sont fermes :
+Trois principes accompagnent cette liberté :
 
-### Règle 1 — Vous devez pouvoir expliquer chaque ligne
+### 1. Comprendre ce que vous rendez
 
-Vous devez être capables d'expliquer chaque partie de votre code et de maîtriser ce que l'agent a
-produit. Vos documents de review doivent notamment rendre compte de cette compréhension.
+L'objectif est que vous puissiez expliquer chaque partie de votre code, y compris ce que l'agent a
+produit. Vos documents de review sont l'occasion de montrer cette compréhension.
 
-### Règle 2 — Vous devez tracer votre processus
+### 2. Garder une trace de votre démarche
 
-Vous rendrez des documents de **review** : ce que vous avez demandé, ce que l'agent a produit, ce
-que vous avez corrigé et pourquoi. Ils rendent visible votre raisonnement et les décisions prises
-pendant le développement.
+Les documents de **review** racontent ce que vous avez demandé, ce que l'agent a produit, ce que
+vous avez corrigé et pourquoi. Ils rendent visibles votre raisonnement et vos décisions, et ils
+comptent dans l'évaluation.
 
-C'est un livrable important pour votre évaluation.
+### 3. Assumer le résultat, quel qu'en soit l'auteur
 
-### Règle 3 — Ce qui casse est de votre responsabilité
-
-Un `docker compose up` qui échoue au moment de l'évaluation, une migration qui perd des données ou
-un secret commité dans le dépôt sont des problèmes à prévenir et à corriger, quelle que soit leur
-origine.
+Un `docker compose up` qui échoue, une migration qui perd des données ou un secret commité restent
+vos problèmes, que la ligne fautive vienne de vous ou de l'agent. Le plus simple est de les
+anticiper.
 
 ---
 
@@ -204,29 +200,27 @@ de Git. Les séances reviendront sur ces notions, avec un rythme adapté à un n
 ## 8. L'évaluation
 
 Une note sur 20, sur le projet de groupe. Le détail complet est dans la
-[grille d&#39;évaluation](projet/grille-evaluation.md) ; voici la logique.
+grille d'évaluation ; voici la logique.
 
 | Bloc                                         | Ce que je regarde                                                                                       |
 | -------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | **Processus produit & agentic**        | Vos specs, vos instructions projet, vos documents de review, vos traces de prompts avec les itérations |
 | **Qualité technique & architecture**  | L'API, le schéma, les migrations, l'auth, la gestion d'erreurs, Docker                                 |
-| **Flow d'équipe**                     | Historique Git, pull requests, reviews réelles, tests verts                                            |
+| **Flow d'équipe**                     | Pull requests, reviews réelles, tests verts                                                            |
 | **Qualité du rendu & recul critique** | Projet livré, clarté des choix documentés, retour d'expérience honnête sur l'agent                 |
 
-Trois choses qui pèsent lourd, et qu'on sous-estime toujours :
+Deux points qui comptent beaucoup, et qu'on a tendance à sous-estimer :
 
-1. **Le démarrage doit fonctionner.** `git clone`, `cp .env.example .env`, `docker compose up`.
-2. **L'historique Git raconte une histoire.** Un dépôt avec trois commits « update » créés le
-   dernier soir ne permet pas de mettre en valeur votre organisation, vos itérations ni votre
-   travail d'équipe.
-3. **Le retour d'expérience compte autant que le succès.** Un groupe qui explique précisément où
-   l'agent s'est planté, comment ils s'en sont aperçus et ce qu'ils ont corrigé aura une meilleure
-   note qu'un groupe qui affirme que tout s'est bien passé.
+1. **Un démarrage qui fonctionne du premier coup.** `git clone`, `cp .env.example .env`,
+   `docker compose up`.
+2. **Un retour d'expérience honnête.** Expliquer précisément où l'agent s'est trompé, comment vous
+   vous en êtes aperçus et ce que vous avez corrigé a plus de valeur qu'affirmer que tout s'est bien
+   passé.
 
 ### Points de vigilance
 
 - Le respect de la stack commune est nécessaire pour que le projet puisse être évalué.
-- Conservez des traces de votre usage agentic : instructions, reviews et prompts.
+- Pensez à conserver des traces de votre usage de l'agent : instructions, reviews et prompts.
 - Ne commitez jamais de secret dans le dépôt. Si cela arrive, signalez-le immédiatement et
   remplacez le secret concerné.
 
@@ -236,7 +230,7 @@ Trois choses qui pèsent lourd, et qu'on sous-estime toujours :
 
 Quelques conseils, tirés des années précédentes.
 
-**Faites tourner ce que vous produisez.** Le réflexe le plus important de tout le module. Du code
+**Faites tourner ce que vous produisez.** C'est sans doute le réflexe le plus utile du module. Du code
 généré qui n'a pas été exécuté n'est pas du code, c'est une hypothèse. Testez à chaque lot, pas à
 la fin de la séance.
 
@@ -247,8 +241,8 @@ mauvaises surprises.
 mieux qu'une heure d'allers-retours avec un agent qui ne comprend pas ce que vous voulez. Vous
 verrez la différence dès la séance 1.
 
-**Ne restez pas bloqués plus de vingt minutes.** Ni sur un bug, ni sur un agent qui tourne en
-rond.
+**N'hésitez pas à demander de l'aide.** Au-delà d'une vingtaine de minutes bloqués sur un bug ou
+sur un agent qui tourne en rond, venez me voir ou sollicitez un autre groupe.
 
 **Commitez souvent, sur des branches.**
 
@@ -262,6 +256,5 @@ rond.
 ├── OUTILS.md          ← installation des outils, à faire avant la séance 1
 ├── README.md         ← l'index et le calendrier
 ├── seances/          ← les 7 séances : un dossier cours/ et un dossier tp/ par séance
-├── projet/           ← le sujet GearShare et la grille d'évaluation
-└── templates/        ← modèles à copier dans votre dépôt (checklist de review, etc.)
+└── templates/        ← modèles à copier dans votre dépôt (fiche feature, plan d'implémentation)
 ```
