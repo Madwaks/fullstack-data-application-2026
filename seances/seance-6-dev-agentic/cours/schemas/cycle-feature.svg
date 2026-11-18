@@ -1,0 +1,29 @@
+<svg viewBox="-12 14 904 168" width="904" height="168" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Les étapes d'une feature : intuition business, PRD, évaluation technique, compromis et MVP, plan, code et revue, tests des critères, mesure. La mesure relance une itération suivante qui repart de l'intuition business."><style>svg{--ink:#172033;--muted:#5a6579;--line:#dce2eb;--surface:#ffffff;--code-bg:#eef2f7;--accent:#2752c4;--accent-soft:#e7edfb;--mark:#a4520a;--font-body:"IBM Plex Sans","Segoe UI",system-ui,-apple-system,sans-serif;--font-display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;--font-mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;}
+@media (prefers-color-scheme: dark){svg{--ink:#e3e8f1;--muted:#98a3b7;--line:#263043;--surface:#151c28;--code-bg:#111925;--accent:#86a6ff;--accent-soft:#1b2640;--mark:#f0a35c;}}
+.sch-bg{fill:var(--code-bg);}
+.sch-wrap { overflow-x: auto; background: var(--code-bg); border: 1px solid var(--line); border-radius: 10px; padding: 1rem; }
+.sch-box { fill: var(--surface); stroke: var(--line); stroke-width: 1.2; }
+.sch-hi { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.2; }
+.sch-zone { fill: none; stroke: var(--muted); stroke-width: 1.2; stroke-dasharray: 6 5; }
+.sch-zlabel { fill: var(--muted); font: 500 11px var(--font-body); letter-spacing: 0.06em; text-transform: uppercase; }
+.sch-name { fill: var(--ink); font: 700 19px var(--font-display); }
+.sch-actor { fill: var(--ink); font: 600 14px var(--font-display); }
+.sch-sub { fill: var(--muted); font: 400 12px var(--font-mono); }
+.sch-k { fill: var(--muted); font: 500 10.5px var(--font-body); letter-spacing: 0.08em; }
+.sch-v { fill: var(--ink); font: 400 12.5px var(--font-body); }
+.sch-lbl { fill: var(--ink); font: 400 12px var(--font-body); }
+.sch-phase { fill: var(--muted); font: 600 10.5px var(--font-body); letter-spacing: 0.1em; text-transform: uppercase; }
+.sch-life { stroke: var(--line); stroke-width: 1.2; stroke-dasharray: 3 4; }
+.sch-tick { stroke: var(--muted); stroke-width: 1; }
+.sch-flow { stroke: var(--ink); stroke-width: 1.6; fill: none; }
+.sch-flow.sch-tok { stroke: var(--accent); stroke-width: 2; }
+.sch-flow.sch-ret { stroke-dasharray: 6 4; }
+.sch-ah { fill: var(--ink); }
+.sch-ah-tok { fill: var(--accent); }
+text.sch-m, tspan.sch-m { font-family: var(--font-mono); font-size: 12px; }
+text.sch-m { fill: var(--ink); }
+text.sch-big { font-size: 14px; }
+text.sch-dot { font-size: 22px; font-weight: 700; }
+.sch-faint, text.sch-faint { fill: var(--muted); }
+.sch-note { font-style: italic; }
+.sch-secret, tspan.sch-secret, text.sch-secret { fill: var(--mark); font-weight: 600; }</style><rect class="sch-bg" x="-12" y="14" width="904" height="168" rx="10"/><defs><marker id="cf-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="sch-ah" d="M0,0 L10,5 L0,10 z"/></marker><marker id="cf-tok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="sch-ah-tok" d="M0,0 L10,5 L0,10 z"/></marker></defs><rect class="sch-box" x="9" y="40" width="92" height="52" rx="8"/><text class="sch-actor" x="55" y="62" text-anchor="middle">Intuition</text><text class="sch-actor" x="55" y="80" text-anchor="middle">business</text><line class="sch-flow" x1="103" y1="66" x2="116" y2="66" marker-end="url(#cf-ink)"/><rect class="sch-box" x="119" y="40" width="92" height="52" rx="8"/><text class="sch-actor" x="165" y="71" text-anchor="middle">PRD</text><line class="sch-flow" x1="213" y1="66" x2="226" y2="66" marker-end="url(#cf-ink)"/><rect class="sch-box" x="229" y="40" width="92" height="52" rx="8"/><text class="sch-actor" x="275" y="62" text-anchor="middle">Évaluation</text><text class="sch-actor" x="275" y="80" text-anchor="middle">technique</text><line class="sch-flow" x1="323" y1="66" x2="336" y2="66" marker-end="url(#cf-ink)"/><rect class="sch-box" x="339" y="40" width="92" height="52" rx="8"/><text class="sch-actor" x="385" y="62" text-anchor="middle">Compromis</text><text class="sch-actor" x="385" y="80" text-anchor="middle">&amp; MVP</text><line class="sch-flow" x1="433" y1="66" x2="446" y2="66" marker-end="url(#cf-ink)"/><rect class="sch-hi" x="449" y="40" width="92" height="52" rx="8"/><text class="sch-actor" x="495" y="71" text-anchor="middle">Plan</text><line class="sch-flow" x1="543" y1="66" x2="556" y2="66" marker-end="url(#cf-ink)"/><rect class="sch-box" x="559" y="40" width="92" height="52" rx="8"/><text class="sch-actor" x="605" y="62" text-anchor="middle">Code</text><text class="sch-actor" x="605" y="80" text-anchor="middle">+ revue</text><line class="sch-flow" x1="653" y1="66" x2="666" y2="66" marker-end="url(#cf-ink)"/><rect class="sch-box" x="669" y="40" width="92" height="52" rx="8"/><text class="sch-actor" x="715" y="62" text-anchor="middle">Tests des</text><text class="sch-actor" x="715" y="80" text-anchor="middle">critères</text><line class="sch-flow" x1="763" y1="66" x2="776" y2="66" marker-end="url(#cf-ink)"/><rect class="sch-box" x="779" y="40" width="92" height="52" rx="8"/><text class="sch-actor" x="825" y="71" text-anchor="middle">Mesure</text><path class="sch-flow sch-tok" d="M825,94 L825,136 L55,136 L55,97" marker-end="url(#cf-tok)"/><text class="sch-lbl" x="440" y="158" text-anchor="middle">itération suivante : la mesure dit si la V2 vaut la peine d'être construite</text></svg>

@@ -73,7 +73,9 @@ document, et ce document est validé par quelqu'un avant de passer à la suivant
 validations des *portes*. Elles coûtent quelques minutes ; une erreur qui les franchit coûte des
 jours.
 
-<!-- schema: cycle-feature -->
+![Les étapes d'une feature : intuition business, PRD, évaluation technique, compromis et MVP, plan, code et revue, tests des critères, mesure. La mesure relance une itération suivante qui repart de l'intuition business.](schemas/cycle-feature.svg)
+
+*Chaque flèche est une porte : l'étape produit un document, quelqu'un le valide avant de passer à la suivante. En bleu, le plan, la porte la plus rentable (voir partie 3).*
 
 Tout ce cours s'appuie sur un exemple fil rouge : **les avis sur GearShare**. Vous l'implémenterez
 en TP.
@@ -288,7 +290,9 @@ votre fiche : c'est elle qui montre que vous avez réfléchi au *pourquoi*.
 
 Un agent de code, c'est un modèle de langage, des **outils**, et une **boucle** :
 
-<!-- schema: boucle-agentique -->
+![La boucle agentique : rassembler le contexte en lisant et en cherchant, agir en éditant et en créant, vérifier en lançant les tests et en lisant la sortie, puis recommencer un tour. La boucle s'arrête quand l'agent estime avoir fini ou quand vous l'arrêtez.](schemas/boucle-agentique.svg)
+
+*Ce qui fait un agent, c'est l'étape « Vérifier » : il constate les conséquences de ce qu'il fait. Sa qualité dépend donc directement de la boucle de vérification que vous lui donnez.*
 
 À chaque tour, le modèle décide quel outil appeler, lit le résultat, et décide du tour suivant.
 Il s'arrête quand il estime avoir fini — ou quand vous l'arrêtez.
@@ -342,7 +346,9 @@ fichier suffit alors à importer le reste. Un seul fichier de vérité, trois ou
 
 Un skill est une **procédure réutilisable**, rangée dans un dossier :
 
-<!-- schema: dossier-skill -->
+![Le dossier .github/skills/fiche-feature contient SKILL.md, la procédure avec un en-tête name et description, template.md, une ressource que la procédure utilise, et scripts/verifier.py, un script optionnel. L'en-tête de SKILL.md est chargé dès le démarrage, son corps si la demande correspond, les autres fichiers seulement si la procédure le dit.](schemas/dossier-skill.svg)
+
+*Un skill est un dossier. Seul l'en-tête de `SKILL.md` occupe le contexte en permanence : le reste n'est lu qu'au moment où il sert.*
 
 ```markdown
 ---
